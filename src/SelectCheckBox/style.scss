@@ -1,0 +1,24 @@
+
+// <div class="react-select__container">
+//     <div class="react-select__control">
+//         <div class="react-select__value-container">...</div>
+//         <div class="react-select__indicators">...</div>
+//     </div>
+//     <div class="react-select__menu">
+//          <div class="react-select__menu-list">
+//             <div class="react-select__option">...</div>
+//         </div>
+//     </div>
+// </div>
+
+.react-select {
+    &__container {
+        max-width: 40vw;
+        margin: auto;
+       }
+    &__menu{
+        width: unset;
+        text-align: start;
+    }
+}
+
