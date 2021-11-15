@@ -1,7 +1,7 @@
 
 import React,{useState} from "react";
 import MySelect, { allOption } from "./MySelect";
-
+import './style.scss';
 
 const colourOptions = [
     { value: "ocean", label: "Ocean", color: "#00B8D9" },
@@ -22,6 +22,7 @@ const colourOptions = [
             options={colourOptions}
             value={state}
             onChange={(value)=>setstate(value)}
+            
         />
   }
   export default MySelectTest;
