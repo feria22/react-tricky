@@ -22,12 +22,12 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
       </header>
-      {/* <div className="center">
+      <div className="center">
         <button onClick={()=>inc()}>use Debounce, state++ </button>
         <button onClick={()=>dec()}>use Throttle, state-- </button>
       </div>
       <h1>State: {state}</h1>
-      <h1>Select:</h1>
+      {/* <h1>Select:</h1>
       <MySelectTest/> */}
       <TestTable/>
     </div>

@@ -10,7 +10,7 @@ const Option = props => {
         <components.Option {...props}>
           <input
             type="checkbox"
-            checked={props.isSelected}
+            checked={!props.isSelected}
             onChange={() => null}
           />{" "}
           <label>{props.label}</label>
@@ -22,8 +22,8 @@ const Option = props => {
 const MultiValueContainer  = props => {
       const isAll =!!props.selectProps.value.filter(x=>x.value===props.selectProps.allOption.value)?.length
       const current =props.data.value
-      if (isAll&&current!==props.selectProps.allOption.value) return<></>
-      else return(<components.MultiValueContainer  {...props}/> );
+      if (isAll&&current==props.selectProps.allOption.value) return<>All</>
+      else return<></>
       }
   
 const animatedComponents = makeAnimated();
@@ -39,10 +39,11 @@ const MySelect = props => {
   const {isSorted,options,isNumeric,allOption,onChange}=props
 
   const propsOpions=isSorted&&options?sorting(options,isNumeric):options;
-
   const optionsFix=[allOption, ...propsOpions]
+
    return   (<ReactSelect
-        {...props}
+    {...props}
+        
         options={optionsFix}
         classNamePrefix="react-select"
         className="react-select__container"
@@ -89,10 +90,9 @@ MySelect.propTypes = {
 
 MySelect.defaultProps = {
   allOption,
-  hideSelectedOptions:true,
+  hideSelectedOptions:false,
   isSorted:true,
-  isNumeric:false
-
+  isNumeric:false,
 };
 
 export default MySelect;
